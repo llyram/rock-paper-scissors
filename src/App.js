@@ -18,8 +18,11 @@ const App = () => {
 
   useEffect(() => {
     getCompChoice();
-    game();
   }, [counter]);
+
+  useEffect(() => {
+    game();
+  }, [compChoice]);
 
   const getCompChoice = () => {
     const choices = ["r", "p", "s"];
